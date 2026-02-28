@@ -21,13 +21,12 @@ function formatDate(date) {
 
   // отформатировать дату
   // добавить ведущие нули к единственной цифре дню/месяцу/часам/минутам
-  let d = date;
-  d = [
-    '0' + d.getDate(),
-    '0' + (d.getMonth() + 1),
-    '' + d.getFullYear(),
-    '0' + d.getHours(),
-    '0' + d.getMinutes()
+  let d = [
+    '0' + date.getDate(),
+    '0' + (date.getMonth() + 1),
+    '' + date.getFullYear(),
+    '0' + date.getHours(),
+    '0' + date.getMinutes()
   ].map(component => component.slice(-2)); // взять последние 2 цифры из каждой компоненты
 
   // соединить компоненты в дату
